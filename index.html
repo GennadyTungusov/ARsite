@@ -5,7 +5,7 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
   
 <script>
-  AFRAME.registerComponent('markerhandl', {
+  AFRAME.registerComponent('marker', {
     init: function () {
       this.el.sceneEl.addEventListener('markerFound', () => {
         // redirect to custom URL e.g. google.com
@@ -13,7 +13,7 @@
       })
     }
   });
-  AFRAME.registerComponent('markerhandle', {
+  AFRAME.registerComponent('markerhand', {
     init: function () {
       this.el.sceneEl.addEventListener('markerFound', () => {
         // redirect to custom URL e.g. google.com
@@ -48,7 +48,7 @@
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
     <a-nft
-      markerhandl
+      marker
       type="nft"
       url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/GennadyTungusov/ARsite/master/images/picture"
       smooth="true"
@@ -58,7 +58,7 @@
     >
     </a-nft>
     <a-nft
-      markerhandle
+      markerhandl
       type="nft"
       url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/GennadyTungusov/ARsite/master/images/cup"
       smooth="true"
