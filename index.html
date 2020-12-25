@@ -5,16 +5,19 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
   
 <script>
-var path = "https://www.google.com/";
-  AFRAME.registerComponent('markerhandler', {
+  AFRAME.registerComponent('cup', {
     init: function () {
-      if(this.el.id == "cup")
-      {
-        path = "https://www.yandex.com/";
-      }
       this.el.sceneEl.addEventListener('markerFound', () => {
         // redirect to custom URL e.g. google.com
-        window.location = path;
+        window.location = 'https://www.yandex.ru';
+      })
+    }
+  });
+    AFRAME.registerComponent('arkhangelsk', {
+    init: function () {
+      this.el.sceneEl.addEventListener('markerFound', () => {
+        // redirect to custom URL e.g. google.com
+        window.location = 'https://www.google.com';
       })
     }
   });
@@ -45,6 +48,7 @@ var path = "https://www.google.com/";
       smoothCount="10"
       smoothTolerance=".01"
       smoothThreshold="5"
+           <a-entity picture></a-entity>
     >
     </a-nft>
     <a-nft
@@ -56,6 +60,7 @@ var path = "https://www.google.com/";
       smoothCount="10"
       smoothTolerance=".01"
       smoothThreshold="5"
+           <a-entity cup></a-entity>
     >
     </a-nft>
     <a-nft
@@ -67,6 +72,7 @@ var path = "https://www.google.com/";
       smoothCount="10"
       smoothTolerance=".01"
       smoothThreshold="5"
+           <a-entity arkhangelsk></a-entity>
     >
     </a-nft>
     <!-- static camera that moves according to the device movemenents -->
