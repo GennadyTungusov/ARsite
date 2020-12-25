@@ -5,7 +5,7 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
   
 <script>
-  AFRAME.registerComponent('marker', {
+  AFRAME.registerComponent('picture', {
     init: function () {
       this.el.sceneEl.addEventListener('markerFound', () => {
         // redirect to custom URL e.g. google.com
@@ -13,7 +13,7 @@
       })
     }
   });
-  AFRAME.registerComponent('markerhand', {
+  AFRAME.registerComponent('cup', {
     init: function () {
       this.el.sceneEl.addEventListener('markerFound', () => {
         // redirect to custom URL e.g. google.com
@@ -21,7 +21,7 @@
       })
     }
   });
-  AFRAME.registerComponent('markerhandler', {
+  AFRAME.registerComponent('arkhangelsk', {
     init: function () {
       this.el.sceneEl.addEventListener('markerFound', () => {
         // redirect to custom URL e.g. google.com
@@ -48,7 +48,7 @@
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
     <a-nft
-      marker
+      picture
       type="nft"
       url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/GennadyTungusov/ARsite/master/images/picture"
       smooth="true"
@@ -58,7 +58,7 @@
     >
     </a-nft>
     <a-nft
-      markerhandl
+      cup
       type="nft"
       url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/GennadyTungusov/ARsite/master/images/cup"
       smooth="true"
@@ -68,7 +68,7 @@
     >
     </a-nft>
     <a-nft
-      markerhandler
+      arkhangelsk
       type="nft"
       url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/GennadyTungusov/ARsite/master/images/arkhangelsk"
       smooth="true"
