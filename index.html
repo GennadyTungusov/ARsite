@@ -8,8 +8,10 @@
 var path = "https://www.google.com/";
   AFRAME.registerComponent('markerhandler', {
     init: function () {
-      if(this.id == "cup")
-      path = "https://www.yandex.com/";
+      if(this.el.id == "cup")
+      {
+        path = "https://www.yandex.com/";
+      }
       this.el.sceneEl.addEventListener('markerFound', () => {
         // redirect to custom URL e.g. google.com
         window.location = path;
