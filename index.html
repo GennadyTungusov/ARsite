@@ -13,6 +13,22 @@
       })
     }
   });
+  AFRAME.registerComponent('markerhandle', {
+    init: function () {
+      this.el.sceneEl.addEventListener('markerFound', () => {
+        // redirect to custom URL e.g. google.com
+        window.location = 'https://www.google.com/';
+      })
+    }
+  });
+  AFRAME.registerComponent('markerhandler', {
+    init: function () {
+      this.el.sceneEl.addEventListener('markerFound', () => {
+        // redirect to custom URL e.g. google.com
+        window.location = 'https://www.google.com/';
+      })
+    }
+  });
 </script>
 
 <body style="margin : 0px; overflow: hidden;">
@@ -35,6 +51,26 @@
       markerhandl
       type="nft"
       url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/GennadyTungusov/ARsite/master/images/picture"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    >
+    </a-nft>
+    <a-nft
+      markerhandle
+      type="nft"
+      url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/GennadyTungusov/ARsite/master/images/cup"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    >
+    </a-nft>
+    <a-nft
+      markerhandler
+      type="nft"
+      url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/GennadyTungusov/ARsite/master/images/arkhangelsk"
       smooth="true"
       smoothCount="10"
       smoothTolerance=".01"
