@@ -1,0 +1,100 @@
+
+#logo-picture{
+    width: 244px;
+    height: 76px;
+}
+
+.title{
+    width: unset !important;
+}
+
+h1{
+    font: normal bold 38px 'PT Sans', Arial, sans-serif;
+    color: #080073;
+}
+
+h2{
+    font: normal bold 34px 'Exo 2', Arial, sans-serif;
+}
+
+h3{
+    font: normal bold 30px 'Exo 2', Arial, sans-serif;
+    margin: 20px;
+}
+
+.h1-main-photo{
+    margin: 15px;
+    margin-top: 0px;
+    width: 300px;
+    height: 400px;
+    float: left;
+    border-radius: 0.5rem;
+}
+
+p.program-text > br, p.arkhangelsk-text> br{
+    margin: 5px;
+}
+
+.gradient-bg{
+    border-radius: 0.5rem;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#1471da, endColorstr=#1C85FB)"; /* IE 8-9 */
+    background: -webkit-linear-gradient(left, rgb(125, 236, 255), #05fac5); /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+    background: -moz-linear-gradient(left, rgb(125, 236, 255), #05fac5); /* Firefox 3.6-15 */
+    background: -o-linear-gradient(left, rgb(125, 236, 255), #05fac5); /* Opera 11.1-12 */
+    background: linear-gradient(to right, rgb(125, 236, 255), #05fac5); /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+}
+
+.program-text{
+    margin: 20px;
+    margin-left: 45px;
+    line-height: 60px;
+    font: normal normal 25px 'Exo 2',Arial,sans-serif;
+}
+
+.h1-main-text{
+    font: normal normal 30px 'Exo 2', Arial, sans-serif;
+    color: #080073;
+    line-height: 40px;
+    margin: 15px;
+    text-align: justify;
+    padding-top: 10px;
+    text-indent: 40px;
+}
+
+.arkhangelsk-city{
+    width: 95%;
+    border-radius: 0.5rem;
+}
+
+.arkhangelsk-text{
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-top: 30px;
+    line-height: 60px;
+    font: normal normal 25px 'Exo 2',Arial,sans-serif;
+    text-align: justify;
+}
+
+.contact-text{
+    margin: 21px;
+    font: normal normal 25px 'Exo 2',Arial,sans-serif;
+    color: #080073;
+}
+
+.text-author{
+    text-align: right;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #FFFF00;
+    color: #FFC0CB;
+}
+
+.nav-link{
+    font: normal bold 16px 'Open Sans', Arial, sans-serif;
+    margin: 10px;
+}
+
+a:hover, a:active{
+    color: #7ee0d3 !important;
+}
