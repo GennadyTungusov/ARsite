@@ -1,52 +1,233 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-<title>Чашка</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Программа ПБК</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
 </head>
-<!-- import aframe and then ar.js with image tracking / location based features -->
-<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-  
-<script>
-  AFRAME.registerComponent('markerhandler', {
-    init: function () {
-      this.el.sceneEl.addEventListener('markerFound', () => {
-        // redirect to custom URL e.g. google.com
-        window.location = 'https://gennadytungusov.github.io/ARsite/picture.html';
-      })
-    }
-  });
-</script>
+<body>
 
-<body style="margin : 0px; overflow: hidden;">
-  <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
-  <div class="arjs-loader">
-    <div>Loading, please wait...</div>
-  </div>
+    <!-- Шапка сайта -->
+    <header class="sticky-top bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light" >
+            <div class="container title">
+                <a class="navbar-brand brand-logo d-flex" href="#">
+                    <img id="logo-picture" src="img/navbar_logo.png" alt="Логотип" class="header-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#program">Программа</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#about">Сведения о городе</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#gift">Что привезти из Архангельска</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#contact">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Секция "Приветствие" от Андрея Поташева -->
+    <section class="pb-5">
+        <div class="container text-center pt-5">
+            <h1 class="mb-5">Дорогие коллеги, проведение ПБК в Архангельске – честь для нас.</h1>
+            <img class="h1-main-photo" src="img/photo.jpg" alt="Фотография">
+            <p class="h1-main-text">
+                Архангельск - столица обширной лесной области, важнейший транспортный узел для снабжения арктических территорий и 
+                Северного морского пути и занимает лидирующее место в стране по учтенным запасам алмазов. 
+                Это регион, который привлекает инвесторов. Пример тому – ГК «Росводоканал».
+                От имени коллектива «РВК-Архангельск» и от себя лично хочу пожелать всем нам плодотворной работы, 
+                новых идей и практических решений, которые будут способствовать  развитию общего дела.
+            </p>
+            <p id="program" class="h1-main-text text-author">
+                С уважением, Андрей Поташев
+            </p>
+        </div>
+    </section>
 
-  <!-- a-frame scene -->
-  <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-    embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-  >
-    <!-- a-nft is the anchor that defines an Image Tracking entity -->
-    <!-- on 'url' use the path to the Image Descriptors created before. -->
-    <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
-    </a-nft>
-    <a-nft
-      markerhandler
-      id= "cup"
-      type="nft"
-      url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/GennadyTungusov/ARsite/master/images/cup"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5">
-    </a-nft>
-    <!-- static camera that moves according to the device movemenents -->
-    <a-entity camera></a-entity>
-  </a-scene>
+    <!-- Секция "Программа" -->
+    <section>
+        <div class="container">
+            <h2 class="text-center pt-3">Программа</h2>
+            <h3>4 июля</h3>
+            <p class="program-text">
+                План:<br>
+                - Прибытие в отель "Novotel", наб. Северной двины, 55<br>
+                - 19.30-22.00 приветственный ужин<br>
+                Для ГД и первой линейки УК в ресторане - пивоварне "Кабинет", Воскресенская ул., 17<br>
+                Для ФД и второй линейки УК в ресторане "El Fuego", просп. Чумбарова-Лучинского, 39<br>
+            </p>
+
+            <h3>5 июля</h3>
+            <p class="program-text">
+                План:<br>
+                - Прибытие в отель "Novotel", наб. Северной двины, 55<br>
+                - 9.30-11.30  экскурсионная поездка на теплоходе "Гоголь"<br>
+                Место: Морской-речной вокзал, наб. Северной Двины, д. 26<br>
+                - 10.30-11.30 встреча Михалькова А. Ю.<br>
+                - 12.00-13.00 обед<br>
+                Место: Ресторан Новотель, наб. Северной двины, 55<br>
+                - 13.00-16.00 совещание<br>
+                Место: Конференц-зал «АРР», наб. Северной Двины, 71<br>
+                - 16.00-16.15 кофе-пауза<br>
+                - 16.15-17.00 продолжение совещания<br>
+                - 18.00-19.00 набсовет для Михалькова А.Ю.<br>
+                Место: Переговорная "Novotel", наб. Северной двины, 55<br>
+                - 19.30-22.00 ужин<br>
+                Место: Ресторан "Почтовая контора", наб. Северной Двины, 78<br>
+            </p>
+
+            <h3>6 июля</h3>
+            <p class="program-text">
+                План:<br>
+                - 8.45-9.00 Приветственный кофе-брейк<br>
+                Место: Конференц-зал «АРР», наб. Северной Двины, 71<br>
+                - 9.00-11.00 совещание<br>               
+                Место: Конференц-зал «АРР», наб. Северной Двины, 71<br>             
+                - 11.00-11.15 кофе-пауза<br>         
+                - 11.15-13.00 продолжение совещания<br>              
+                - 13.00-14.00 обед<br>            
+                Место: Ресторан отеля "Novotel", наб. Северной двины, 55<br>     
+                - 15.00-16.00 ГБХ для Михалькова А.Ю.<br>      
+                Место: Переговорная "Novotel", наб. Северной двины, 55<br>      
+                - 15.00-18.00 экскурсия для ФД и второй линейки УК<br>     
+                Место: Музей "Малые Корелы", Архангельская обл., Приморский р-н, д. Малые Карелы<br>      
+                - 18.30-22.00 ужин для ФД и второй линейки УК<br>     
+                Место: Ресторан "Малые Корелы", Архангельская обл., Приморский р-н, д. Малые Карелы<br>  
+                -17.00-19.00 экскурсия для ГД и первой линейки УК<br>    
+                Место: Колёсный пароход "Н.В. Гоголь", Морской-речной вокзал, наб. Северной Двины, д. 26<br> 
+                - 19.00-22.00 ужин для ГД и первой линейки УК<br>  
+                Место: Рыбный ресторан "Базар", просп. Троицкий, 52, корпус 1<br> 
+            </p>
+
+            <h3>7 июля</h3>
+            <p class="program-text">
+                План:<br>
+                - 8.45-9.00 Приветственный кофе-брейк<br>
+                Место: Конференц-зал «АРР», наб. Северной Двины, 71<br>
+                - 9.00-11.15 совещание<br>
+                Место: Конференц-зал «АРР», наб. Северной Двины, 71<br>
+                - 11.15-11.30 кофе-пауза<br>
+                - 11.30-13.00 продолжение совещания<br>
+                - 13.00-14.00 обед<br>
+                Место: Ресторан Новотель, наб. Северной двины, 55<br>
+                - 14.00-14.45 совещание<br id="about">
+                Место: Конференц-зал «АРР», наб. Северной Двины, 71<br>
+                - с 15.00 трансфер в аэропорт<br>
+            </p>
+        </div>
+    </section>
+
+    <!-- Секция "Архангельск" -->
+    <section class="pb-5">
+        <div class="container text-center pt-2">
+            <h1 class="mb-5">Архангельск</h1>
+            <img class="arkhangelsk-city" style="border-radius: 0.5rem;" src="img/Arkhangelsk.jpg" alt="Фотография Архангельска">
+            <p class="arkhangelsk-text">
+                - В первой четверти XX века в Архангельске была сформирована первая в России флотилия ледоколов. <br>
+                - Архангельск — родина российского триколора. Флаг был поднят на первом русском морском корабле «Святой Павел», который был спущен на воду на Соломбальской верфи в 1694 году.<br>
+                - В конце 18-го века здесь по приказу Екатерины II была открыта первая в Российской Империи мореходная школа.<br>
+                - В Архангельской области никогда не было крепостного права. <br>
+                - Архангельск по-настоящему джазовый город. Джазовая группа «Архангельск» была известна не только в СССР, но и в Англии, Японии, Америке.<br>
+                - Высотка – символ Архангельска, самое большое сооружение города в 24 этажа, официальное название – Здание проектных организаций. С любой точки Архангельска виднеется это огромное здание, поэтому одно из его многочисленных названий – Архангельский небоскреб или высотка.<br>
+                - За заслуги в годы Великой Отечественной войны Архангельску было присвоено почётное звание Города воинской славы.<br>
+                - Писатель С.Г. Писахов, известный своими поморскими сказками «Перепелиха», «Сеня Малина», «Северное сияние» родился и жил в Архангельске. В 2008 г. был открыт музей С.Г. Писахову.<br>
+                - В небе над городом нередко можно наблюдать северное сияние (чаще всего с августа до марта, летом  - яркие белые ночи).<br>
+                - Соловецкие острова в Архангельской области являются всемирно наследием ЮНЕСКО.<br>
+                - «Н. В. Гоголь» — старейший из ныне функционирующих в России пароход-колёсник.<br>
+                - Рекордный мороз в Архангельске  составил -45,2 градуса.<br id="gift">
+            </p>
+        </div>
+    </section>
+
+    <!-- Секция "Что нужно сделать посетив Архангельск?" -->
+    <section class="pb-5">
+        <div class="container gradient-bg text-center pt-3 pb-2">
+            <h1 class="mb-5">Что нужно сделать посетив Архангельск?</h1>
+            <p class="arkhangelsk-text">
+                • прогуляться прозрачной белой ночью по набережной<br>
+                • пожать руку знаменитому сказочнику Писахову на улице-музее Чумбарова-Лучинского<br>
+                • отведать и увезти с собой на память расписную архангельскую козулю<br>
+                • сфотографировать самое узнаваемое здание города — архангельскую «высотку», про ангела<br>
+                • посетить крупнейший на Русском Севере музей деревянного зодчества Малые Корелы<br>
+                • попробовать мармелад из беломорских водорослей<br>
+                • попробовать блюда поморской кухни: уху из трески, кулебяку с палтусом, слабосоленую семгу, сметанных шаниги, поморские калачи и ягодные калитки<br id="contact">
+            </p>
+        </div>
+    </section>
+    
+    <!-- Секция "Контакты" -->
+    <section class="pb-5">
+        <div class="container">
+            <h1 class="mb-5 text-center">Контакты</h1>
+            <div class="row">
+                <div class="col-6">
+                    <h3>Приемная</h3>
+                    <div class="contact-text">
+                        <p>
+                            Адрес:<br>
+                            163002, г. Архангельск, ул. Касаткиной, 9<br>
+                        </p>
+                        <p>
+                            Электронная почта:<br>
+                            rvkarh@rosvodokanal.ru<br>
+                        </p>
+                        <p>
+                            Телефон:<br>
+                            +7-921-089-58-68<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h3>Елисеева Алиса Владимировна</h3>
+                    <div class="contact-text">
+                        <p>
+                            Директор по персоналу<br>
+                        </p>
+                        <p>
+                            Электронная почта:<br>
+                            a.eliseeva@rosvodokanal.ru<br>
+                        </p>
+                        <p>
+                            Телефон:<br>
+                            +7-918-345-30-93<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-5">
+        <div class="container text-center">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1d540d9c78e10eaf061e9ac8d5f6ddaa76b2b7a5d6f78c4237017acfbda8506e&amp;width=auto&amp;height=508&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+    </section>
+    
+    
+    <!-- Подвал сайта -->
+    <footer class="text-center">
+        <p class="pb-3">
+            © Росводоканал, 2022 год
+        </p>
+    </footer>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.js.map"></script>
+    
 </body>
 </html>
